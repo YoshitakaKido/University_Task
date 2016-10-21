@@ -1,5 +1,5 @@
         .data                       # データセグメントにデータを配置することを示す
-str:    .asciiz     "s153038\n"
+str:    .asciiz     "Hello, World"
         .text                       # 以下の記述をテキストセグメントに配置
         .align      2               # 4byte境界になるように調整する
         .globl      main
