@@ -1,7 +1,7 @@
 # University_Task
 
 ## 大学の課題をPushしていくフォルダ
-This directory is pushed on my university task by me.    
+This directory is pushed on my university task.    
    
 
 ## ただ自分のローカルからPushできなくて結構困っている状態 Orz
