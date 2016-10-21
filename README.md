@@ -1,8 +1,8 @@
 # University_Task
 
-## 主に大学の課題をPushしていくフォルダ
-   
+## 大学の課題をPushしていくフォルダ
+This directory is pushed on my university task by me.    
    
 
 ## ただ自分のローカルからPushできなくて結構困っている状態 Orz
-   However, I have a trouble not to push in github. 
+However, I have a trouble not to push in github. 
