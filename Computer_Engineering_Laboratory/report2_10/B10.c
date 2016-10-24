@@ -19,7 +19,11 @@ int main(){
 			result[top] = agari;
 		}
 	}
-	for(i = top; i >= 0; i--)
+	t = 0;
+	for(i = top; i >= 0; i--){
 		printf("%04d ", result[i]);
-	return 0;
+		t++;
+		if(t % 10 == 0)
+			printf("\n");
+	}return 0;
 }
