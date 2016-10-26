@@ -1,4 +1,4 @@
-# Report2_01
+# Report2_01 - Compulsory subject -
 
 ## 課題内容 - Contents
 * "Hello, World"を表示するプログラムを作成し、SPIM上で実行せよ
