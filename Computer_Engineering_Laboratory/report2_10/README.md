@@ -1,4 +1,4 @@
-# report2_10
+# report2_10 - Elective subject -
 
 ## 課題内容 - Contents  
 * 100の階乗を計算し、表示するプログラムを作成せよ  
