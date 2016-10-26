@@ -1,4 +1,4 @@
-# report2_09
+# report2_09 - Elective subject -
 
 ## 課題内容 - Contents
 * 階乗(再帰ではなく)繰り返しによって求めるサブルーチンを作成せよ  
