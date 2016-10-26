@@ -1,4 +1,4 @@
-# report2_11
+# report2_11 - Elective subject -
 
 ## 課題内容 - Contents
 * 実行結果が以下のように正しく表示されるように、report2_10で作成したプログラムを改良せよ  
