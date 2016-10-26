@@ -1,4 +1,4 @@
-# Report2_02  
+# Report2_02 - Compulsory subject -
 
 ## 課題内容 - Contents
 * 配列の和を求めるアセンブリ・プログラムを作成せよ
