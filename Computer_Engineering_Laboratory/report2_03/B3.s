@@ -13,14 +13,14 @@ loop:
         li      $v0, 5          # 整数入力システムコールの番号５を設定
         syscall                 # 入力された整数が$v0に入る
         slt     $t0, $v0, $t0   # 入力された数($v0)が0より小さいか　小さい：$t0 = 1, 大きい：$t0 = 0
-        bne     $t0, $0, break  # 入力された数が0より小さい場合はbreakへ
+        bne     $t0, $0, out    # 入力された数が0より小さい場合はラベルoutへ
         move    $a0, $v0        # その整数をシステムコールの引数にする
         li      $v0, 1          # 整数表示システムコールの番号1を設
         syscall                 # 入力された整数が画面に表示される
-        li      $v0, 4          # 改行処理
-        la      $a0, str
-        syscall
+        li      $v0, 4          # print_stringのシステムコールコードは4
+        la      $a0, str        # asciizで保存したプリントする文字列のアドレスを$a0に格納
+        syscall                 # 改行処理
         j       loop            # jump to loop
-break:
+out:
         move    $v0, $0
         j       $ra             # jump to $ra
