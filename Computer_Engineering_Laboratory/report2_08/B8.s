@@ -14,18 +14,18 @@ loop:
             li      $v0, 4              # syscallで string型を表示する為にレジスタ $v0 に即値4を格納
             syscall                     # 文字列 " != "を表示
 
-            move	$a0, $t0            # レジスタ $a0 にレジスタ $t0の保持するアドレスを格納
-            addi	$sp, $sp, -8        # スタックポインタの退避
-            sw	    $t0, 4($sp)         #
-            sw	    $ra, 0($sp)         # 戻り値の指定
+            move    $a0, $t0            # レジスタ $a0 にレジスタ $t0の保持するアドレスを格納
+            addi    $sp, $sp, -8        # スタックポインタの退避
+            sw      $t0, 4($sp)         #
+            sw      $ra, 0($sp)         # 戻り値の指定
 
             jal     fact                # jump to fact and save position to $ra
 
-            lw	    $ra, 0($sp)         # 戻り値を呼び出す
-            lw	    $t0, 4($sp)         #
-            addi	$sp, $sp, 8         # スタックポインタを元に戻す
-            move	$a0, $v0            # レジスタ $a0 にレジスタ $v0の保持するアドレスを格納
-            li	    $v0, 1              # syscallで int型を表示する為にレジスタ $v0に即値１を格納
+            lw      $ra, 0($sp)         # 戻り値を呼び出す
+            lw      $t0, 4($sp)         # 
+            addi    $sp, $sp, 8         # スタックポインタを元に戻す
+            move    $a0, $v0            # レジスタ $a0 にレジスタ $v0の保持するアドレスを格納
+            li      $v0, 1              # syscallで int型を表示する為にレジスタ $v0に即値１を格納
             syscall                     # レジスタ $a0 の保持する値が表示される
 
             la      $a0, str            # strが指すアドレスをレジスタ $a0に格納
@@ -38,19 +38,19 @@ loop:
             j       $ra                 # jump to $ra
 fact:
             move    $t0, $a0            # レジスタ $t0にレジスタ $a0の保持するアドレスを格納
-            bne	    $t0, $0, refact     # レジスタ $t0の保持する値が０でなければラベル refactへ
-            li	    $v0, 1              # レジスタ $v0に即値１をロード
-            j	    $ra                 # 戻る
+            bne     $t0, $0, refact     # レジスタ $t0の保持する値が０でなければラベル refactへ
+            li      $v0, 1              # レジスタ $v0に即値１をロード
+            j       $ra                 # 戻る
 
 refact:
-            subu	$a0, $t0, 1         # レジスタ $t0から１引いたものをレジスタ $a0に格納
-            addi	$sp, $sp, -8        # スタックポインタの退避
-            sw	    $t0, 4($sp)         #
-            sw	    $ra, 0($sp)         # 戻り値の指定
-            jal	    fact                # ラベル fact へ
-            lw	    $ra, 0($sp)         # 戻り値を呼び出す
-            lw	    $t0, 4($sp)         #
-            addi	$sp, $sp, 8         # スタックポインタを元に戻す
-            mult	$t0, $v0            # レジスタ $t0とレジスタ $v0の値で乗算を行う
-            mflo	$v0                 # 乗算の結果を格納
-            j	    $ra                 # 戻る
+            subu    $a0, $t0, 1         # レジスタ $t0から１引いたものをレジスタ $a0に格納
+            addi    $sp, $sp, -8        # スタックポインタの退避
+            sw      $t0, 4($sp)         #
+            sw      $ra, 0($sp)         # 戻り値の指定
+            jal     fact                # ラベル fact へ
+            lw      $ra, 0($sp)         # 戻り値を呼び出す
+            lw      $t0, 4($sp)         #
+            addi    $sp, $sp, 8         # スタックポインタを元に戻す
+            mult    $t0, $v0            # レジスタ $t0とレジスタ $v0の値で乗算を行う
+            mflo    $v0                 # 乗算の結果を格納
+            j       $ra                 # 戻る
