@@ -119,3 +119,9 @@ fact内では、
 ```
 
 ## 実行結果、および、実行結果の正しさの説明
+
+<img src="https://github.com/YoshitakaKido/University_Task/blob/master/Computer_Engineering_Laboratory/report2_09/result09.png">
+
+```txt
+上図より、予期された結果が示された。
+```
