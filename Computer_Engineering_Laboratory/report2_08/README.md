@@ -144,3 +144,9 @@ refact内では、
 ```
 
 ## 実行結果、および、その実行結果の正しさの説明
+
+<img src="https://github.com/YoshitakaKido/University_Task/blob/master/Computer_Engineering_Laboratory/report2_08/result08.png">
+
+```txt
+上図より、予期される結果が示された。
+```
