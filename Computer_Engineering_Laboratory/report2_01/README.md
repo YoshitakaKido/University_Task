@@ -29,3 +29,4 @@ main:
 
 ## 実行結果(コンソールの表示内容)
 
+<img src="https://github.com/YoshitakaKido/University_Task/blob/master/Computer_Engineering_Laboratory/report2_01/result.png">
