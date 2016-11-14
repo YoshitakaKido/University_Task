@@ -4,10 +4,10 @@
 * "Hello, World"を表示するプログラムを作成し、SPIM上で実行せよ
 * 自分の学生番号を表示するプログラムを作成・実行せよ
 
-## 学生番号を表示するプログラム
+## "Hello, World"を表示するプログラム
 ```s
         .data                       # データセグメントにデータを配置することを示す
-str:    .asciiz     "s153038"
+str:    .asciiz     "Hello, World"
         .text                       # 以下の記述をテキストセグメントに配置
         .align      2               # 4byte境界になるように調整する
         .globl      main
@@ -26,7 +26,3 @@ main:
 3) Simulator → Run/Continueを選択し実行する。
 4) 実行結果がConsoleに表示される。
 ```
-
-## 実行結果(コンソールの表示内容)
-
-<img src="https://github.com/YoshitakaKido/University_Task/blob/master/Computer_Engineering_Laboratory/report2_01/result.png">
