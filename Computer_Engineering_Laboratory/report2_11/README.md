@@ -11,3 +11,46 @@
      100未満なら'0'をひとつ表示  
       10未満なら'0'をひとつ表示
 * また、1行の表示桁数を10個(または8個)ずつに揃えよ
+
+## C言語版プログラムのリスト
+```c
+#include <stdio.h>
+unsigned int result[40];
+int main(){
+	unsigned int top = 0;
+	unsigned int kake;
+	unsigned int agari;
+	int i, t;
+	result[0] = 1;
+	for(kake = 2; kake <= 100; kake++){
+		agari = 0;
+		for(i = 0; i <= top; i++){
+			t = result[i] * kake;
+			t = t + agari;
+			agari = t / 10000;
+			result[i] = t % 10000;
+		}
+		if(agari > 0){
+			top++;
+			result[top] = agari;
+		}
+	}
+	t = 0;
+	for(i = top; i >= 0; i--){
+		printf("%04d ", result[i]);
+		t++;
+		if(t % 10 == 0)
+			printf("\n");
+	}return 0;
+}
+```
+## 完成したプログラムのリスト
+
+## プログラムの説明
+## 実行結果、および、その実行結果の正しさの説明
+```txt
+0093 3262 1544 3944 1526 8169 9238 8562 6670 0490
+7159 6826 4381 6214 6859 2963 8952 1759 9993 2299
+1560 8941 4639 7615 6518 2862 5369 7920 8272 2375
+8251 1852 1091 6864 0000 0000 0000 0000 0000 0000 
+```
