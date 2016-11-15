@@ -38,47 +38,46 @@ else:
             ble	    $t1, $t5, for_kake  # kake <= 100ならばラベルfor_kakeへ
             move	$t3, $t0            # レジスタ$t3にレジスタ$t0の保持するアドレスを格納
 
-            li      $t7, 10
+            li      $t7, 10             # レジスタ$t7に即値10をロード(t = 10)
 
 print:
             la      $a0, space          # spaceが指すアドレスをレジスタ$taに格納
             li      $v0, 4              # print_string出力
-            syscall                     #
-            sll     $t6, $t3, 2         #
-            lw      $t5, result($t6)    #
+            syscall                     # 文字列" "を表示
+            sll     $t6, $t3, 2         # レジスタ$t3の内容を２ビット左へ論理シフト
+            lw      $t5, result($t6)    # result[i]
             li      $t6, 1000           # レジスタ$t6に即値1000をロード
 
             bgt	    $t5, $t6, else1     # $t5 > $t6 ならばラベルelse1へ
             la      $a0, zero           # asciizで保存したプリントする文字列のアドレスをレジス$a0に格納
             li	    $v0, 4              # print_string出力
-            syscall                     # 改行表示
+            syscall                     # 文字列"0"を表示
 else1:
-            li	    $t6, 100
-            bgt	    $t5, $t6, else2
-            la	    $a0, zero
-            li	    $v0, 4
-            syscall
+            li	    $t6, 100            # レジスタ$t6に即値100をロード
+            bgt	    $t5, $t6, else2     # $t5 > $t6 ならばラベルelse2へ
+            la	    $a0, zero           # asciizで保存したプリントする文字列のアドレスをレジス$a0に格納
+            li	    $v0, 4              # print_string出力
+            syscall                     # 文字列"0"を表示
 else2:
-            li	    $t6, 10
-            bgt	    $t5, $t6, else3
-            la	    $a0, zero
-            li	    $v0, 4
-            syscall
+            li	    $t6, 10             # レジスタ$t6に即値10をロード
+            bgt	    $t5, $t6, else3     # $t5 > $t6 ならばラベルelse3へ
+            la	    $a0, zero           # asciizで保存したプリントする文字列のアドレスをレジス$a0に格納
+            li	    $v0, 4              # print_string出力
+            syscall                     # 文字列"0"を表示
 else3:
-            move	$a0, $t5
-            li	    $v0, 1
-            syscall
-            subu	$t3, $t3, 1
+            move	$a0, $t5            # レジスタ$a0にレジスタ$t5の保持するアドレスを格納
+            li	    $v0, 1              # print_int出力
+            syscall                     # レジスタ$t5の価を表示
+            subu	$t3, $t3, 1         # i--
 
-            subu    $t7, $t7, 1
-            bne     $t7, $0, print
+            subu    $t7, $t7, 1         # t--
+            bne     $t7, $0, print      # t != 0 ならばラベルprintへ
 
-            la	    $a0, str
-            li	    $v0, 4
-            syscall
+            la	    $a0, str            # asciizで保存したプリントする文字列のアドレスをレジスタ $a0に格納
+            li	    $v0, 4              # print_string出力
+            syscall                     # 改行表示
 
-            li      $t7, 10
+            li      $t7, 10             # t = 10
 
-            bge	    $t3, $0, print
-
-            j       $ra
+            bge	    $t3, $0, print      # $t3 <= 0 ならばラベルprintへ
+            j       $ra                 # 呼び出し側に戻る
