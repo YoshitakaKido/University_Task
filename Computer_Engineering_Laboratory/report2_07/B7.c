@@ -31,18 +31,24 @@ int B6(){
 		printf("%p : %d\n", p, *p);
 }
 
-
 int main(){
 
-	int * judge_1 = array
-	int * judge_2 = array2
+	int * from = array + 5;
+	int * to = array;
 
-	if (*judge == 0 ) {
-		B5()
+	if(from > to){
+		B5();
 	}
-	if (*judge ==1 ) {
-		B6()
-	}
+	else
+		B6();
+
+	int * from_2 = array2;
+	int * to_2 = array2 + 5;
+
+	if(from_2 > to_2)
+		B5();
+	else
+		B6();
 
 	return 0;
 }
