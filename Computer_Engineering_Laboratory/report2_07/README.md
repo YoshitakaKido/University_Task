@@ -40,12 +40,23 @@ int B6(){
 		printf("%p : %d\n", p, *p);
 }
 
-
 int main(){
-	
-	if(array)
+
+	int * from = array + 5;
+	int * to = array;
+
+	if(from > to){
 		B5();
-	if (array2)
+	}
+	else
+		B6();
+
+	int * from_2 = array2;
+	int * to_2 = array2 + 5;
+
+	if(from_2 > to_2)
+		B5();
+	else
 		B6();
 
 	return 0;
