@@ -33,11 +33,16 @@ int B6(){
 
 
 int main(){
-	
-	if(array)
-		B5();
-	if (array2)
-		B6();
+
+	int * judge_1 = array
+	int * judge_2 = array2
+
+	if (*judge == 0 ) {
+		B5()
+	}
+	if (*judge ==1 ) {
+		B6()
+	}
 
 	return 0;
 }
