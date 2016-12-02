@@ -1,0 +1,66 @@
+// 4.31: patternMoore
+
+module patternMoore(input   clk, 
+                    input   reset, 
+                    input   a,
+                    output  y);
+
+  reg [1:0] state, nextstate;
+
+  // ’¾õ’ÂÖ’¤Î’Éä’¹æ’²½
+  parameter S0 = 2'b00;
+  parameter S1 = 2'b01;
+  parameter S2 = 2'b10;
+
+  // ’¾õ’ÂÖ’¥ì’¥¸’¥¹’¥¿’¤Î’Æ°’ºî
+  always @(posedge clk, posedge reset)
+    if (reset) state <= S0;
+    else       state <= nextstate;
+
+  // ’¼¡’¾õ’ÂÖ’´Ø’¿ô
+  always @ (*)
+    case (state)
+      S0: if (a) nextstate <= S0;
+          else   nextstate <= S1;
+      S1: if (a) nextstate <= S2;
+          else   nextstate <= S1;
+      S2: if (a) nextstate <= S0;
+          else   nextstate <= S1;
+      default:   nextstate <= S0;
+    endcase
+
+  // ’½Ğ’ÎÏ’´Ø’¿ô
+  assign y = (state == S2);
+endmodule
+
+// 4.32: patternMealy
+
+module patternMealy(input   clk, 
+                    input   reset, 
+                    input   a,
+                    output  y);
+
+  reg state, nextstate;
+
+  // ’¾õ’ÂÖ’¤Î’Éä’¹æ’²½
+  parameter S0 = 1'b0;
+  parameter S1 = 1'b1;
+
+  // ’¾õ’ÂÖ’¥ì’¥¸’¥¹’¥¿’¤Î’Æ°’ºî
+  always @(posedge clk, posedge reset)
+    if (reset) state <= S0;
+    else       state <= nextstate;
+
+  // ’¾õ’ÂÖ’Á«’°Ü’´Ø’¿ô
+  always @ (*)
+    case (state)
+      S0: if (a) nextstate <= S0;
+          else   nextstate <= S1;
+      S1: if (a) nextstate <= S0;
+          else   nextstate <= S1;
+      default:   nextstate <= S0;
+    endcase
+
+  // ’½Ğ’ÎÏ’´Ø’¿ô
+  assign y = (a & state == S1);
+endmodule
