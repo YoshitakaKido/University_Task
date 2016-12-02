@@ -1,0 +1,15 @@
+C:/Users/s153038/Desktop/systemverilog-example/ex4_3_module.sv {1 {vlog -work work4_3 -sv C:/Users/s153038/Desktop/systemverilog-example/ex4_3_module.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module gates
+
+Top level modules:
+	gates
+
+} {} {}} C:/Users/s153038/Desktop/systemverilog-example/ex4_3_testbench.sv {1 {vlog -work work4_3 -sv C:/Users/s153038/Desktop/systemverilog-example/ex4_3_testbench.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ex4_3_testbench
+
+Top level modules:
+	ex4_3_testbench
+
+} {} {}}

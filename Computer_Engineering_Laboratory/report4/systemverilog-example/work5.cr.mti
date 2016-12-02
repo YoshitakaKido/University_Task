@@ -1,0 +1,45 @@
+C:/Users/s153038/Desktop/systemverilog-example/ex4_5_testbench.sv {1 {vlog -work work5_2 -sv C:/Users/s153038/Desktop/systemverilog-example/ex4_5_testbench.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ex4_5_testbench
+
+Top level modules:
+	ex4_5_testbench
+
+} {} {}} C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv {0 {vlog -work work5_2 -sv C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module sevenseg
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(5): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(5): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(6): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(6): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(7): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(7): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(8): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(8): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(9): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(9): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(10): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(10): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(11): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(11): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(12): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(12): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(13): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(13): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(14): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(14): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(15): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(15): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(16): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(16): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(17): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(17): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(18): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(18): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(19): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(19): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(20): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(20): Case item comparison:  Cannot mix packed and unpacked types in this operation
+** Error: C:/Users/s153038/Desktop/systemverilog-example/ex4_5_module.sv(21): Case item comparison:  Illegal assignment to type 'reg $[6:0]' from type 'bit[6:0]': Cannot assign a packed type to an unpacked type.
+
+} {4.0 37.0} {}}

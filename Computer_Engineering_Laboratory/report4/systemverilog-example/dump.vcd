@@ -1,0 +1,68 @@
+$date
+	Thu Dec 01 15:14:09 2016
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module testbench1 $end
+$var reg 1 ! a $end
+$var reg 1 " b $end
+$var reg 1 # c $end
+$var reg 1 $ y $end
+$scope module dut $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 1 ' c $end
+$var reg 1 ( y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+1$
+1(
+0%
+0&
+0'
+$end
+#10
+1#
+1'
+0(
+0$
+#20
+1"
+0#
+1&
+0'
+#30
+1#
+1'
+#40
+1!
+0"
+0#
+1%
+0&
+0'
+1(
+1$
+#50
+1#
+1'
+#60
+1"
+0#
+1&
+0'
+0(
+0$
+#70
+1#
+1'
